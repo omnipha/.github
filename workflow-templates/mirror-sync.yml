@@ -1,5 +1,5 @@
 # Reusable mirror sync workflow. Used by linux-<soc> repos and pmaports-mirror.
-# Expects repo variable UPSTREAM_URL and secret MIRROR_SSH_KEY (or GITHUB_TOKEN push).
+# Pushes one upstream branch to refs/heads/upstream with the built-in GITHUB_TOKEN.
 name: Mirror sync
 on:
   workflow_call:
@@ -16,7 +16,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Fetch and push mirror
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           git clone --bare "${{ inputs.upstream_url }}" repo.git
           cd repo.git
-          git push --mirror "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" origin/${{ inputs.upstream_branch }}:refs/heads/upstream
+          git push "https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git" \
+            "refs/heads/${{ inputs.upstream_branch }}:refs/heads/upstream"
