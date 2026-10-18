@@ -1,0 +1,22 @@
+# Reusable mirror sync workflow. Used by linux-<soc> repos and pmaports-mirror.
+# Expects repo variable UPSTREAM_URL and secret MIRROR_SSH_KEY (or GITHUB_TOKEN push).
+name: Mirror sync
+on:
+  workflow_call:
+    inputs:
+      upstream_url:
+        required: true
+        type: string
+      upstream_branch:
+        required: false
+        type: string
+        default: master
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch and push mirror
+        run: |
+          git clone --bare "${{ inputs.upstream_url }}" repo.git
+          cd repo.git
+          git push --mirror "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" origin/${{ inputs.upstream_branch }}:refs/heads/upstream
