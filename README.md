@@ -8,15 +8,15 @@ Built on mainline Linux and Nura (postmarketOS) packaging, but centralized, CI-f
 
 | Repository | Purpose |
 |---|---|
-| [`ports`](https://github.com/omnipha/ports) | Device packages, firmware packaging, patches, machine-readable device database |
+| [`ports`](https://github.com/omnipha/ports) | [Browse devices](https://github.com/omnipha/ports/blob/main/DEVICES.md): machine-readable status, packages, evidence, contribution entry |
 | [`builder`](https://github.com/omnipha/builder) | Build tool (pmbootstrap fork): server profiles, SSH key injection, headless CI mode |
-| [`images`](https://github.com/omnipha/images) | Flashable image definitions and release builds per device |
-| [`linux-<soc>`](https://github.com/omnipha?tab=repositories) | Kernel mirrors: `upstream` branch (bot-synced) + `omnipha` branch (our patches) |
+| [`images`](https://github.com/omnipha/images) | Image definitions; build/release workflow remains in progress |
+| [`linux-<soc>`](https://github.com/orgs/omnipha/repositories) | Shared SoC kernel tracking or mirror, per-repo source policy |
 | [`pmaports-mirror`](https://github.com/omnipha/pmaports-mirror) | Read-only bot mirror of upstream pmaports |
 
 ## How to contribute
 
-Humans and AI agents are both welcome. See [CONTRIBUTING.md](CONTRIBUTING.md). Every repository contains an `AGENTS.md` with machine-readable orientation. Every device PR is built by CI into a flashable image automatically.
+Humans and AI agents are both welcome. Start with the [device catalog](https://github.com/omnipha/ports/blob/main/DEVICES.md) and [contribution guide](https://github.com/omnipha/ports/blob/main/CONTRIBUTING.md). A listed device or package is **not** an installable Omnipha image. Device issues and measured tests live in a `device-<vendor>-<codename>` repo when a port is active; other models remain searchable in `ports`. Image builds and downloads require a separately verified release gate. No device PR automatically builds a flashable image today.
 
 ## Kernel policy
 
