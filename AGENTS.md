@@ -4,6 +4,7 @@ This repository holds org-wide conventions. Other omnipha repos inherit from her
 
 ## What lives here
 - `README.md` — org profile (rendered on github.com/omnipha)
+- `USE_CASES.md` — intended-use catalog; the only copy, with `idea` / `tested` / `released` status
 - `CONTRIBUTING.md` — contribution rules for humans and AI agents
 - `ISSUE_TEMPLATE/` — issue templates (device support request, bug, image request)
 - `workflow-templates/` — reusable GitHub Actions (mirror sync, image build)

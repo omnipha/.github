@@ -4,6 +4,8 @@
 
 Built on mainline Linux and Nura (postmarketOS) packaging, but centralized, CI-first, and agent-friendly.
 
+Intended setups, from agent hosts to Home Assistant nodes, wall displays and printer hosts, are cataloged in [USE_CASES.md](USE_CASES.md). Entries there are ideas until device evidence says otherwise.
+
 ## Repository map
 
 | Repository | Purpose |
