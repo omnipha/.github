@@ -140,9 +140,19 @@ A portable jump host or network probe you can place somewhere, reach over SSH, a
 - Profile: `server`
 - Status: `idea`
 
+## Security
+
+### `security-lab`
+A pocket toolkit for authorized security testing and learning, in the spirit of Kali Linux or a Flipper Zero: network and Wi-Fi audits of your own systems, Bluetooth and NFC inspection, USB gadget experiments, and a screen to read results on site. Use it only on systems you own or have written permission to test.
+- Uses: Wi-Fi, Bluetooth, NFC where present, USB OTG, display, battery
+- Profile: `console-ui`
+- Status: `idea`
+- Caveat: Wi-Fi monitor mode and packet injection depend on the chip and driver. Many phone Wi-Fi chips do not support them, so expect an external USB adapter. Hardware support is checked per device in `ports`.
+
 ## For agents
 
 - Add or change a use case in this file only. Do not copy the catalog into another repo.
 - Keep the `id`, `Uses`, `Profile` and `Status` lines. They are the machine-readable contract.
+- Security entries describe authorized testing only. Do not add attack walkthroughs or targets.
 - `idea` never means a device supports it. Check `ports` before naming hardware as available.
 - A use case graduates to `tested` only with a device id, date and linked evidence. It graduates to `released` only with a verified `images` release.
