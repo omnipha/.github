@@ -114,6 +114,13 @@ Runs your own DNS filter, VPN exit or Tailscale node where the phone already sit
 - Profile: `server`
 - Status: `idea`
 
+### `wifi-repeater`
+Extends or creates Wi-Fi. The phone joins an existing network and re-broadcasts it, or acts as an access point or router with a different uplink: USB Ethernet adapter, or the SIM modem as a mobile router.
+- Uses: Wi-Fi in access-point mode, USB Ethernet, modem where supported, battery
+- Profile: `server`
+- Status: `idea`
+- Caveat: Repeating on one radio halves throughput. A wired uplink or a SIM uplink gives full Wi-Fi speed. Access-point mode and simultaneous client plus AP depend on the Wi-Fi chip and driver, so check per device in `ports`.
+
 ## Out and about
 
 ### `sensor-logger`
