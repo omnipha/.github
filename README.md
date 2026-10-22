@@ -15,6 +15,7 @@ Intended setups, from agent hosts to Home Assistant nodes, wall displays and pri
 | [`images`](https://github.com/omnipha/images) | Image definitions; build/release workflow remains in progress |
 | [`linux-<soc>`](https://github.com/orgs/omnipha/repositories) | Shared SoC kernel tracking or mirror, per-repo source policy |
 | [`pmaports-mirror`](https://github.com/omnipha/pmaports-mirror) | Read-only bot mirror of upstream pmaports |
+| [`recipes`](https://github.com/omnipha/recipes) | Composable application recipes (Home Assistant, agent-host, Klipper, etc.) and `omnipha.yaml` spec |
 
 ## How to contribute
 
