@@ -43,7 +43,7 @@ A small Git, build or CI node for repositories that fit in the phone's memory.
 - Status: `idea`
 
 ### `local-models`
-Runs small local language or vision models on the phone GPU instead of sending every request out.
+Runs small local language or vision models on the phone GPU instead of sending every request out. Pick the phone from the [GPU and RAM catalog](https://github.com/omnipha/ports/blob/main/GPU.md): RAM limits the model size, the GPU ranking is external Android data, and the Linux GPU column says whether we have actually tried it.
 - Uses: GPU, RAM, storage
 - Profile: `agent-host`
 - Status: `idea`
